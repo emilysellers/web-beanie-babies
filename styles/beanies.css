@@ -1,0 +1,8 @@
+main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+/* .card {
+    background-color: tan;
+} */
