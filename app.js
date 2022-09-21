@@ -1,5 +1,5 @@
 /* Imports */
-
+import { getBeanies } from './fetch-utils.js';
 /* Get DOM Elements */
 
 /* State */
