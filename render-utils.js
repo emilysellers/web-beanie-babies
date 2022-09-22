@@ -6,13 +6,16 @@ export function renderBeanie(beanie) {
     img.src = beanie.image;
     img.alt = beanie.title;
 
+    const content = document.createElement('div');
+    content.classList.add('content');
+
     const h2 = document.createElement('h2');
     h2.textContent = beanie.title;
 
-    const p = document.createElement('p');
-    p.textContent = beanie.astroSign;
+    const astroSign = document.createElement('span');
+    astroSign.textContent = beanie.astroSign;
 
-    li.append(img, h2, p);
+    li.append(img, h2, astroSign);
 
     return li;
 }
