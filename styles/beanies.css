@@ -1,8 +1,33 @@
-main {
+body {
     display: grid;
     grid-template-rows: auto 1fr;
 }
 
-/* .card {
+main {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: 175px;
+    gap: 10px;
+}
+
+.card {
+    height: 175px;
     background-color: tan;
-} */
+    border: 1px solid grey;
+    display: grid;
+    grid-template-columns: 175px 1fr;
+}
+
+.card img {
+    width: 95%;
+    height: 95%;
+    object-fit: contain;
+    align-self: center;
+    /* justify-self: center; */
+}

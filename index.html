@@ -20,6 +20,8 @@
         <!-- css -->
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="styles/beanies.css" />
+
         <!-- add link for page specific css -->
     </head>
 
@@ -31,19 +33,18 @@
 
         <main>
             <section>
-                <form id="search-form">
+                <form id="search-form" name="name">
                     <input />
                     <select id="astro-select">
                         <option>All astro signs</option>
                     </select>
                     <button id="search-button">Search</button>
                 </form>
+
+                <p id="notification-display"></p>
             </section>
-            <p id="notification-display">Showing XX or XX beanie babies</p>
-            <ul id="beanies-list">
-                <li class="card">
-                    <!-- <span>Beanie 1</span> -->
-                </li>
+            <ul id="beanies-list" class="list">
+                <li class="card"></li>
             </ul>
         </main>
     </body>

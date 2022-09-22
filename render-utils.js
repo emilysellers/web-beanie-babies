@@ -2,17 +2,24 @@ export function renderBeanie(beanie) {
     const li = document.createElement('li');
     li.classList.add('card');
 
-    const image = document.createElement('img');
-    image.src = ``;
-    image.alt = beanie.name;
+    const img = document.createElement('img');
+    img.src = beanie.image;
+    img.alt = beanie.title;
 
     const h2 = document.createElement('h2');
-    h2.textContent = beanie.name;
+    h2.textContent = beanie.title;
 
     const p = document.createElement('p');
-    p.textContent = beanie.astro;
+    p.textContent = beanie.astroSign;
 
-    li.append(image, h2, p);
+    li.append(img, h2, p);
 
     return li;
+}
+
+export function renderAstroSignOption(astroSign) {
+    const option = document.createElement('option');
+    option.value = astroSign.name;
+    option.textContent = astroSign.name;
+    return option;
 }
