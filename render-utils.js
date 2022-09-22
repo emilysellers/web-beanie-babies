@@ -9,13 +9,14 @@ export function renderBeanie(beanie) {
     const content = document.createElement('div');
     content.classList.add('content');
 
-    const h2 = document.createElement('h2');
-    h2.textContent = beanie.title;
+    const title = document.createElement('h2');
+    title.textContent = beanie.title;
 
     const astroSign = document.createElement('span');
     astroSign.textContent = beanie.astroSign;
 
-    li.append(img, h2, astroSign);
+    content.append(title, astroSign);
+    li.append(img, content);
 
     return li;
 }
