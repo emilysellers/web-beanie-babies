@@ -7,6 +7,7 @@ main {
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 20px;
+    background-color: rgb(240, 226, 230);
 }
 
 .list {
