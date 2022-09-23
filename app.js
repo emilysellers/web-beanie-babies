@@ -10,13 +10,13 @@ const beaniesList = document.getElementById('beanies-list');
 
 /* State */
 let error = null;
-//let count = 0;
+let count = 0;
 let astroSigns = [];
 let beanies = [];
 
 /* Events */
 window.addEventListener('load', async () => {
-    findBeanies();
+    //findBeanies();
 
     const response = await getAstroSigns();
 
@@ -31,10 +31,9 @@ window.addEventListener('load', async () => {
 
 async function findBeanies(name, astroSign) {
     const response = await getBeanies(name, astroSign);
-    console.log('find', name);
 
     error = response.error;
-    //count = response.count;
+    count = response.count;
     beanies = response.data;
 
     displayNotifications();
@@ -65,7 +64,7 @@ function displayNotifications() {
         notificationDisplay.textContent = error.message;
     } else {
         notificationDisplay.classList.remove('error');
-        notificationDisplay.textContent = `showing ${beanies.length} beanies`;
+        notificationDisplay.textContent = `showing ${count} of ${beanies.length} beanies`;
     }
 }
 
