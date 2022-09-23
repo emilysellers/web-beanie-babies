@@ -11,7 +11,7 @@ export async function getBeanies(name, astroSign) {
         .from('beanie_babies')
         .select('*', { count: 'exact' })
         .order('title')
-        .limit(100);
+        .limit(50);
 
     if (name) {
         query = query.ilike('title', `%${name}%`);

@@ -64,7 +64,7 @@ function displayNotifications() {
         notificationDisplay.textContent = error.message;
     } else {
         notificationDisplay.classList.remove('error');
-        notificationDisplay.textContent = `showing ${count} of ${beanies.length} beanies`;
+        notificationDisplay.textContent = `showing ${beanies.length} of ${count} beanies`;
     }
 }
 
