@@ -16,7 +16,7 @@ let beanies = [];
 
 /* Events */
 window.addEventListener('load', async () => {
-    //findBeanies();
+    findBeanies();
 
     const response = await getAstroSigns();
 
@@ -26,10 +26,12 @@ window.addEventListener('load', async () => {
     if (!error) {
         displayAstroOptions();
     }
+    // displayBeanies();
 });
 
 async function findBeanies(name, astroSign) {
     const response = await getBeanies(name, astroSign);
+    console.log('find', name);
 
     error = response.error;
     //count = response.count;
